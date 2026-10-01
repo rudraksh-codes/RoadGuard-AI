@@ -9,7 +9,7 @@ class HazardSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 class DetectionSerializer(serializers.ModelSerializer):
-    
+    hazards = HazardSerializer(many=True, read_only = True)
     class Meta : 
         model = Detection
         fields = "__all__"
