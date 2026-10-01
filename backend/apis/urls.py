@@ -8,4 +8,5 @@ router.register("detections", views.DetectionViewSet, basename="detection")
 
 urlpatterns = [
     path('', include(router.urls)), 
+    path('stats/', views.stats), 
 ]
