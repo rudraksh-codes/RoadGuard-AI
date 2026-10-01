@@ -14,4 +14,17 @@ class DetectionSerializer(serializers.ModelSerializer):
         model = Detection
         fields = "__all__"
 
+        read_only_fields = [
+            "id",
+            "media_type",
+            "status",
+            "error_message",
+            "risk_score",
+            "image_width",
+            "image_height",
+            "created_at",
+            "hazards",
+        ]
+
+
     #file error handle function 
